@@ -2,17 +2,22 @@ import styled from 'styled-components';
 
 export const UserCard = styled.div`
   background-color: #ffffff;
-  width: calc(100% / 3);
+  width: 300px;
   margin: 15px auto;
   border: 1px solid grey;
   border-radius: 8px;
 `;
 
 export const Description = styled.div`
+  text-align: center;
   margin-top: 15px;
   margin-bottom: 30px;
 `;
 
+export const Img = styled.img`
+  width: calc(100% / 2);
+  border-radius: 50%;
+`;
 export const UserName = styled.p`
   margin: 10px;
   text-align: center;
@@ -37,6 +42,8 @@ export const List = styled.ul`
   display: flex;
   justify-content: space-around;
   background-color: #c0c0c0c0;
+  margin: 0;
+  padding: 0;
 `;
 
 export const Item = styled.li`
