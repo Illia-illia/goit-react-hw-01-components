@@ -1,19 +1,24 @@
 import PropTypes from 'prop-types';
+import { Section, Title, List, Item } from './Statistics.styled';
 
 export const Statistics = ({ title, stats }) => {
   return (
-    <section className="statistics">
-      {title && <h2 className="title">{title}</h2>}
+    <Section className="statistics">
+      {title && <Title className="title">{title}</Title>}
 
-      <ul className="stat-list">
+      <List className="stat-list">
         {stats.map(({ id, label, percentage }) => (
-          <li className="item" key={id}>
+          <Item
+            style={{ backgroundColor: getRandomHexColor() }}
+            className="item"
+            key={id}
+          >
             <span className="label">{label}</span>
             <span className="percentage">{percentage}</span>
-          </li>
+          </Item>
         ))}
-      </ul>
-    </section>
+      </List>
+    </Section>
   );
 };
 
@@ -27,3 +32,7 @@ Statistics.propTypes = {
     })
   ),
 };
+
+function getRandomHexColor() {
+  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+}
