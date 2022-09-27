@@ -4,8 +4,8 @@ export const UserCard = styled.div`
   background-color: #ffffff;
   width: 300px;
   margin: 15px auto;
-  border: 1px solid grey;
-  border-radius: 8px;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 `;
 
 export const Description = styled.div`
@@ -41,7 +41,7 @@ export const List = styled.ul`
   list-style-type: none;
   display: flex;
   justify-content: space-around;
-  background-color: #c0c0c0c0;
+  background-color: #f4f3f2;
   margin: 0;
   padding: 0;
 `;
@@ -52,6 +52,11 @@ export const Item = styled.li`
   align-items: center;
   padding-top: 30px;
   padding-bottom: 30px;
+  width: 100px;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  &:not(:last-child) {
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+  }
 `;
 
 export const Label = styled.span`
